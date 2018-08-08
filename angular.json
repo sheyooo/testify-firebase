@@ -28,6 +28,14 @@
             "scripts": []
           },
           "configurations": {
+            "hmr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hmr.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -53,6 +61,10 @@
             "browserTarget": "testify-firebase:build"
           },
           "configurations": {
+            "hmr": {
+              "hmr": true,
+              "browserTarget": "testify-firebase:build:hmr"
+            },
             "production": {
               "browserTarget": "testify-firebase:build:production"
             }
