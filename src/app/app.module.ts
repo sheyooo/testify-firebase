@@ -9,6 +9,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 import { MaterialsModule } from './material-module.module';
 import { TimelineComponent } from './timeline/timeline.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { TimelineComponent } from './timeline/timeline.component';
     FlexLayoutModule,
     BrowserAnimationsModule,
     AngularFirestoreModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   declarations: [

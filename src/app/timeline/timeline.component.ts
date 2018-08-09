@@ -7,7 +7,7 @@ import { AngularFirestore } from '../../../node_modules/angularfire2/firestore';
   styleUrls: ['./timeline.component.css']
 })
 export class TimelineComponent implements OnInit {
-
+  posts$;
   constructor(private afDb: AngularFirestore) { }
 
   ngOnInit() {
@@ -15,6 +15,8 @@ export class TimelineComponent implements OnInit {
       text: 'I\'m happy so happy',
       // user: userId
     });
+
+    this.posts$ = this.afDb.collection('timeline').valueChanges();
   }
 
 }
